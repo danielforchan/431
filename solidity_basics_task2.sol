@@ -41,10 +41,8 @@ contract CallContract{
         x = oc.getX();
     }
 
-   
-
-    /* To Do: function setXTransferETH
-        // your code here//
-    
-    */
+    // To Do: function setXTransferETH
+    function setTransferETH(address otherContract, uint256 x) payable external{
+        OtherContract(otherContract).setX{value: msg.value}(x);
+    }
 }
